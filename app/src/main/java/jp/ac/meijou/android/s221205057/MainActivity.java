@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.button.setOnClickListener(view ->{
+        binding.ChangeButton.setOnClickListener(view ->{
             var text = binding.editTextText.getText().toString();
             binding.text.setText(text);
 

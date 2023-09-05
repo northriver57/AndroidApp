@@ -3,9 +3,11 @@ package jp.ac.meijou.android.s221205057;
 import android.content.Context;
 
 import androidx.datastore.preferences.core.Preferences;
+import androidx.datastore.preferences.core.PreferencesKeys;
 import androidx.datastore.preferences.rxjava3.RxPreferenceDataStoreBuilder;
 import androidx.datastore.rxjava3.RxDataStore;
 
+import io.reactivex.rxjava3.core.Single;
 
 
 public class PrefDataStore {
@@ -28,4 +30,18 @@ public class PrefDataStore {
         return instance;
     }
 
+    public void setString(String key, String value) {
+        dataStore.updateDataAsync(prefsIn -> {
+                    var mutablePreferences = prefsIn.toMutablePreferences();
+                    var prefKey = PreferencesKeys.stringKey(key);
+
+
+
+                    mutablePreferences.set(prefKey, value);
+                    return Single.just(mutablePreferences);
+                })
+                .subscribe();
+    }
+
 }
+

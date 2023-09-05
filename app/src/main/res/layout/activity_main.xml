@@ -8,22 +8,22 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
+        android:layout_width="233dp"
+        android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:text="@string/myname"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/ChangeButton"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ChangeButton"
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="change"
+        android:text="delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +45,10 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:text="save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toEndOf="@+id/editTextText"
         app:layout_constraintTop_toBottomOf="@+id/text" />
 
